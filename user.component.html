@@ -1,0 +1,55 @@
+
+<div class="form">
+  <form>  
+  <mat-form-field class="form-field">
+     <h1>Entery Form</h1>
+    </mat-form-field ><br/>
+    <mat-form-field>
+     <label><b>Enter Your First Name:</b></label>
+     <input matNativeControl matInput [(ngModel)]="user.first_name" type="text"  >
+     </mat-form-field>
+     <mat-form-field>
+     <label><b>Enter Your Last Name:</b></label>
+     <input matNativeControl matInput [(ngModel)]="user.last_name" type='text' > 
+     </mat-form-field>
+     <mat-form-field>
+     <label><b>Enter Your Email_Id:</b></label>
+     <input matNativeControl matInput [(ngModel)]="user.email"  type="text">
+     </mat-form-field>
+      <mat-form-field>   
+     <label><b>Enter Your Gender:</b></label>
+     <input matNativeControl matInput [(ngModel)]="user.gender" type='text' >
+ </mat-form-field><br/><br/>
+     <mat-form-field>
+     <button mat-button  (click)="takeUser()" type="submit" color="primary" >Submit</button>
+    </mat-form-field>
+  </form>
+</div>
+<div>
+  <h1> Table Data </h1>
+   
+     <table id="users">
+         <thead>
+         <tr>
+             <th>ID</th>
+             <th>First-Name</th>
+             <th>Last-Name</th>
+             <th>Email-Id</th>
+             <th>Gender</th>
+             <th>IP-Address</th>
+         </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dt of users">
+                <td>{{dt.id}}</td>
+                <td>{{dt.first_name}}</td>
+                <td>{{dt.last_name}}</td>
+                <td>{{dt.email}}</td>
+                <td>{{dt.gender}}</td>
+                <td>{{dt.ip_address}}</td>
+            </tr>
+        </tbody>
+   </table>
+</div>
+
+
